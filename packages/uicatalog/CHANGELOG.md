@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.2.0 (2026-11-10)
+
+### Features
+
+* Restore &#x60;appium-ios&#x60; monorepo to a working state ([#7](https://github.com/appium/appium-ios/issues/7)) ([80d12e2](https://github.com/appium/appium-ios/commit/80d12e2498fbad7c08eea0ddb868196f00af0840))
+
+### Bug Fixes
+
+* **uicatalog:** adopt the UIScene lifecycle so Xcode 27 builds launch on iOS 27 ([#122](https://github.com/appium/appium-ios/issues/122)) ([6c63601](https://github.com/appium/appium-ios/commit/6c63601c06a94972d1bdb446bf10ff7f05f892c3))
+
+### Miscellaneous Chores
+
+* **deps:** Bump semver from 7.7.2 to 7.8.5 ([#10](https://github.com/appium/appium-ios/issues/10)) ([eae5017](https://github.com/appium/appium-ios/commit/eae501770232c9bc31d751a53c46978628412554))
+* **deps:** Bump semver from 7.7.2 to 7.8.5 ([#20](https://github.com/appium/appium-ios/issues/20)) ([d0be872](https://github.com/appium/appium-ios/commit/d0be8721de74f327613ce17ad1881046d9ede373))
+* ensure Dependabot preserves version ranges ([#24](https://github.com/appium/appium-ios/issues/24)) ([95e4e1a](https://github.com/appium/appium-ios/commit/95e4e1a4703f8ca833f01ecf2af75f4696d98043))
+* publish ([7ca702c](https://github.com/appium/appium-ios/commit/7ca702c25bb87b6f948d6c85c4cd049c284cb52b))
+* publish ([da9df50](https://github.com/appium/appium-ios/commit/da9df509454bca268192150e4d3302d7f000a5c9))
+* publish ([c891212](https://github.com/appium/appium-ios/commit/c89121221cab1f00280a93f49e601edb7f387cbf))
+* publish ([9840077](https://github.com/appium/appium-ios/commit/98400770983bf7a63352073a7523ff6e81d8f0f0))
+* use caret ranges instead of exact versions for dependencies ([#13](https://github.com/appium/appium-ios/issues/13)) ([52d051b](https://github.com/appium/appium-ios/commit/52d051b187e2735ec096994d498eba7b0dfc02dd))
+
+
 ## [4.1.3](https://github.com/appium/appium-ios/compare/ios-uicatalog@4.1.2...ios-uicatalog@4.1.3) (2026-10-26)
 
 ### Bug Fixes

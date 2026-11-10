@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.0 (2026-11-10)
+
+### Features
+
+* move node-devicectl into the monorepo as packages/devicectl ([#21](https://github.com/appium/appium-ios/issues/21)) ([bf39cfd](https://github.com/appium/appium-ios/commit/bf39cfd033b90a153d2c014bed1712161b413235))
+
+### Bug Fixes
+
+* **devicectl:** decode percent-encoded app urls before filtering processes ([#47](https://github.com/appium/appium-ios/issues/47)) ([8b67a58](https://github.com/appium/appium-ios/commit/8b67a58088d8ced5cb7fd8445b3ea7358c06cf0a))
+* **remote-debugger:** connect real-device clients after listeners are attached and release lost services ([#123](https://github.com/appium/appium-ios/issues/123)) ([c2ffd94](https://github.com/appium/appium-ios/commit/c2ffd94ca4c8d2c1952da80a816f9d8ed3188521))
+
+### Miscellaneous Chores
+
+* publish ([cc6e2e4](https://github.com/appium/appium-ios/commit/cc6e2e479f2fd3b198e170ff3d0caa754f418edb))
+* publish ([94702b4](https://github.com/appium/appium-ios/commit/94702b439588a5d52b98dc3138646494c6aae136))
+* publish ([64177b9](https://github.com/appium/appium-ios/commit/64177b9c3543a597629d8310920e515542858ae8))
+
+
 ## [2.2.2](https://github.com/appium/appium-ios/compare/node-devicectl@2.2.1...node-devicectl@2.2.2) (2026-10-26)
 
 ### Bug Fixes

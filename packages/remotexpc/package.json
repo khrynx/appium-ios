@@ -1,6 +1,6 @@
 {
   "name": "appium-ios-remotexpc",
-  "version": "5.28.9",
+  "version": "5.29.0",
   "description": "",
   "keywords": [],
   "bugs": {
@@ -94,12 +94,12 @@
     "@appium/strongbox": "^2.0.0",
     "@appium/support": "^7.2.6",
     "@xmldom/xmldom": "^0.x",
-    "appium-ios-tuntap": "^2.2.6",
+    "appium-ios-tuntap": "^2.3.0",
     "asyncbox": "^6.6.0",
     "axios": "^1.21.0",
     "commander": "^14.0.1",
     "minimatch": "^11.0.1",
-    "node-devicectl": "^2.2.2",
+    "node-devicectl": "^2.3.0",
     "path-to-regexp": "^8.4.0"
   },
   "devDependencies": {

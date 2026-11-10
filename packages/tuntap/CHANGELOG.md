@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.0 (2026-11-10)
+
+### Features
+
+* move appium-ios-tuntap into the monorepo as packages/tuntap ([#14](https://github.com/appium/appium-ios/issues/14)) ([92421e1](https://github.com/appium/appium-ios/commit/92421e10b385fb1b3f05cfa7601954734e8b0196))
+* move appium/coresim into the monorepo as packages/coresim ([#16](https://github.com/appium/appium-ios/issues/16)) ([a1acd55](https://github.com/appium/appium-ios/commit/a1acd556f716595d120bc2bf92b317ad84cbfad4))
+
+### Bug Fixes
+
+* classify TunTap.open() errors by errno code instead of message text ([#34](https://github.com/appium/appium-ios/issues/34)) ([2663782](https://github.com/appium/appium-ios/commit/266378211eaf7629d8e154fa3f35eb5a41e77eb5))
+* keep TunTapPermissionError from TunTap.removeRoute() ([#32](https://github.com/appium/appium-ios/issues/32)) ([5c99572](https://github.com/appium/appium-ios/commit/5c995726b414fbb527801d5a9b3e3da5b6a7fd9c))
+* report &quot;Device has been closed&quot; after TunTap.close() ([#29](https://github.com/appium/appium-ios/issues/29)) ([9e2f8c8](https://github.com/appium/appium-ios/commit/9e2f8c811e2298dc27366f4a8d6d555185a3f5d6))
+
+### Code Refactoring
+
+* share one socket poll loop between TLS connect and forwarder ([#36](https://github.com/appium/appium-ios/issues/36)) ([9df4615](https://github.com/appium/appium-ios/commit/9df46155a357b5865f6f5e5fc1fd5406acd8ad7c))
+
+### Miscellaneous Chores
+
+* ensure Dependabot preserves version ranges ([#24](https://github.com/appium/appium-ios/issues/24)) ([95e4e1a](https://github.com/appium/appium-ios/commit/95e4e1a4703f8ca833f01ecf2af75f4696d98043))
+* publish ([f674d85](https://github.com/appium/appium-ios/commit/f674d8563c83ddaf61921464dfa6cc4618ef8e5e))
+* publish ([bd9ba5f](https://github.com/appium/appium-ios/commit/bd9ba5fd86b87035b15023ae46d3bcec928266b5))
+* publish ([859be1d](https://github.com/appium/appium-ios/commit/859be1d7288d86b5b276e621c10dc43ac34b65c0))
+* publish ([1a2b707](https://github.com/appium/appium-ios/commit/1a2b707d67be5de584d65ab3d540504eec1de0cc))
+* publish ([da9df50](https://github.com/appium/appium-ios/commit/da9df509454bca268192150e4d3302d7f000a5c9))
+* publish ([f63d306](https://github.com/appium/appium-ios/commit/f63d30608de059eb3cf932800fd95e45a1b16b1c))
+* publish ([ea08521](https://github.com/appium/appium-ios/commit/ea08521b1a06e086e979b53002884710a027a12d))
+* publish ([3cc0873](https://github.com/appium/appium-ios/commit/3cc0873527ff977088d7a974e71590b31adbf6fd))
+
+
 ## [2.2.6](https://github.com/appium/appium-ios/compare/appium-ios-tuntap@2.2.5...appium-ios-tuntap@2.2.6) (2026-10-05)
 
 ### Code Refactoring
