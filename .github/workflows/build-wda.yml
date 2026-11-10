@@ -43,6 +43,9 @@ jobs:
           echo "Found app at: $APP"
           mkdir Payload
           cp -r "$APP" Payload/
+          find Payload -name "*.dSYM" -type d -prune -exec rm -rf {} +
+          echo "Remaining dSYM folders (should be none):"
+          find Payload -name "*.dSYM" -type d
           zip -qr WebDriverAgentRunner-Runner.ipa Payload
           ls -lh WebDriverAgentRunner-Runner.ipa
 
