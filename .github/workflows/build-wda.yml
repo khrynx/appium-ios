@@ -1,0 +1,53 @@
+name: Build WDA ipa
+
+# Manual trigger: you start it with a button on the Actions tab
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Get the WDA source code
+        uses: actions/checkout@v4
+
+      - name: Show available Xcode versions
+        run: ls -d /Applications/Xcode*.app
+
+      - name: Use the newest Xcode available
+        run: |
+          NEWEST=$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)
+          echo "Using $NEWEST"
+          sudo xcode-select -s "$NEWEST/Contents/Developer"
+          xcodebuild -version
+
+      - name: Build WebDriverAgentRunner for a real iPhone (unsigned)
+        run: |
+          PROJ=$(find packages/webdriveragent -name "WebDriverAgent.xcodeproj" -not -path "*/node_modules/*" 2>/dev/null | head -1)
+          if [ -z "$PROJ" ]; then
+            PROJ=$(find . -name "WebDriverAgent.xcodeproj" -not -path "*/node_modules/*" | head -1)
+          fi
+          echo "Using project: $PROJ"
+          xcodebuild clean build-for-testing \
+            -project "$PROJ" \
+            -scheme WebDriverAgentRunner \
+            -destination generic/platform=iOS \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Package the app as an .ipa
+        run: |
+          APP=$(find build -type d -name "WebDriverAgentRunner-Runner.app" | head -1)
+          echo "Found app at: $APP"
+          mkdir Payload
+          cp -r "$APP" Payload/
+          zip -qr WebDriverAgentRunner-Runner.ipa Payload
+          ls -lh WebDriverAgentRunner-Runner.ipa
+
+      - name: Save the .ipa so you can download it
+        uses: actions/upload-artifact@v4
+        with:
+          name: WebDriverAgentRunner-ipa
+          path: WebDriverAgentRunner-Runner.ipa
